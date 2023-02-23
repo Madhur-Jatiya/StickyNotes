@@ -20,7 +20,7 @@ public class SaveNoteServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		try {
-			String title = request.getParameter("Title");
+			String title = request.getParameter("title");
 			String content = request.getParameter("content");
 			
 			Sticky_Notes notes = new Sticky_Notes(title,content,new Date());

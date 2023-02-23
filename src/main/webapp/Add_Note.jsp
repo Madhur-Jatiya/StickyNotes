@@ -18,12 +18,12 @@
 
 		<form action="SaveNoteServlet" method="post">
 			<div class="form-group">
-				<label for="title">Note Title</label> <input name="title" required
+				<label for="title"><b>Note Title</b></label> <input name="title" required
 					type="text" class="form-control" id="title"
 					placeholder="Enter Title">
 			</div>
 			<div class="form-group">
-				<label for="content">Note Content</label>
+				<label for="content"><b>Note Content</b></label>
 				<textarea id="content" placeholder="Enter your content here"
 					required name="content" class="form-control" style="height: 200px;"></textarea>
 			</div>
@@ -33,7 +33,7 @@
 			</div>
 		</form>
 
-		<form action="Sticky_Notes.java" method="get">
+		<form action="Sticky_Notes" method="get">
 			<button type="submit" class="btn btn-primary">Add 2</button>
 		</form>
 	</div>
