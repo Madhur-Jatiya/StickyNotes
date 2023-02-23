@@ -37,7 +37,7 @@
 						<p class="card-text"><%=list.get(i).getContent()%>
 						</p>
 						<div class="container text-center mt-4">
-							<a href="UpdateServlet?note_id=<%= list.get(i).getId() %>" class="btn btn-info mr-3">Update</a> 
+							<a href="edit.jsp?note_id=<%= list.get(i).getId() %>" class="btn btn-info mr-3">Update</a> 
 							<a href="DeleteServlet?note_id=<%= list.get(i).getId() %>"	class="btn btn-danger">Delete</a>
 						</div>
 					</div>
