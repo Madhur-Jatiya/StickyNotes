@@ -10,16 +10,14 @@
 <body>
 	<div class="container">
 		<%@ include file="navbar.jsp"%>
-
-		<!-- form -->
 		<br>
 		<h1>Add Your New Note</h1>
 		<br>
 
 		<form action="SaveNoteServlet" method="post">
 			<div class="form-group">
-				<label for="title"><b>Note Title</b></label> <input name="title" required
-					type="text" class="form-control" id="title"
+				<label for="title"><b>Note Title</b></label> <input name="title"
+					required type="text" class="form-control" id="title"
 					placeholder="Enter Title">
 			</div>
 			<div class="form-group">

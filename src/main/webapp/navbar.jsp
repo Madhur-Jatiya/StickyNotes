@@ -13,7 +13,7 @@
         <a class="nav-link" href="Add_Note.jsp">Add Note</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Show notes</a>
+        <a class="nav-link" href="All_Notes.jsp">Show notes</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
