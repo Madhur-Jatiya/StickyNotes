@@ -20,9 +20,8 @@ public class Sticky_Notes {
 	private String content;
 	private Date addedDate;
 
-	public Sticky_Notes(int id, String title, String content, Date addedDate) {
+	public Sticky_Notes(String title, String content, Date addedDate) {
 		super();
-		this.id = id;
 		this.title = title;
 		this.content = content;
 		this.addedDate = addedDate;
