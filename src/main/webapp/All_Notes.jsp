@@ -25,17 +25,21 @@
 				<%
 				Session s = FactoryProvider.getSessionFactory().openSession();
 				List<Sticky_Notes> list = s.createQuery("from Sticky_Notes").list();
-				for (Sticky_Notes note : list) {
+				for (int i = list.size() - 1; i >= 0; i--) {
 				%>
 
 				<div class="card mt-3">
-					<img class="card-img-top m-4" style="max-width:100px;" src="image/notes.png" alt="Card image cap">
+					<img class="card-img-top m-4" style="max-width: 100px;"
+						src="image/notes.png" alt="Card image cap">
 					<div class="card-body">
-						<h5 class="card-title"><%=note.getTitle()%>
-						</h5>
-						<p class="card-text"><%=note.getContent()%>
+						<h3 class="card-title text-center"><%=list.get(i).getId() + "."%><%=list.get(i).getTitle()%>
+						</h3>
+						<p class="card-text"><%=list.get(i).getContent()%>
 						</p>
-						<a href="#" class="btn btn-danger">Delete</a>
+						<div class="container text-center mt-4">
+							<a href="UpdateServlet?note_id=<%= list.get(i).getId() %>>" class="btn btn-info mr-3">Update</a> 
+							<a href="DeleteServlet?note_id=<%= list.get(i).getId() %>>"	class="btn btn-danger">Delete</a>
+						</div>
 					</div>
 				</div>
 

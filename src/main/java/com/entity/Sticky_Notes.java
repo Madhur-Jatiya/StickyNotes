@@ -17,6 +17,7 @@ public class Sticky_Notes {
 	@Column(name = "Notes_id")
 	private int id;
 	private String title;
+	@Column(length = 3000)
 	private String content;
 	private Date addedDate;
 
