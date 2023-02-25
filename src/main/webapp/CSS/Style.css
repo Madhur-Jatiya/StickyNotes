@@ -1,4 +1,12 @@
 @charset "ISO-8859-1";
-.purple{
+
+.purple {
 	background: black;
+}
+
+.card {
+	border: 2px solid black;
+}
+body{
+	padding-bottom:20px;
 }

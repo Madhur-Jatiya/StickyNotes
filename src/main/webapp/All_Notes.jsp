@@ -13,12 +13,14 @@
 <meta charset="ISO-8859-1">
 <title>All Notes</title>
 <%@ include file="All_js_css.jsp"%>
-<header><%@ include file="navbar.jsp"%></header>
+<%@ include file="navbar.jsp"%>
 </head>
 <body>
 	<div class="container">
 		<br>
-		<h1>All Notes</h1>
+		<h1 class="text-center">
+			<u>All Notes</u>
+		</h1>
 
 		<div class="row">
 			<div class="col-12">
@@ -28,7 +30,7 @@
 				for (int i = list.size() - 1; i >= 0; i--) {
 				%>
 
-				<div class="card mt-3">
+				<div class="card mt-3 card">
 					<div class="card-body">
 						<div
 							style="display: flex; justify-content: space-between; align-items: end;">
@@ -43,9 +45,9 @@
 						</p>
 						<div class="container text-center mt-4">
 							<a href="edit.jsp?note_id=<%=list.get(i).getId()%>"
-								class="btn btn-secondary mr-3">Update</a> <a
+								class="btn btn-outline-secondary mr-1">Update</a> <a
 								href="DeleteServlet?note_id=<%=list.get(i).getId()%>"
-								class="btn btn-dark">Delete</a>
+								class="btn btn-dark ml-1">Delete</a>
 						</div>
 					</div>
 				</div>

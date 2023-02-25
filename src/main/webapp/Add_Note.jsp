@@ -6,28 +6,34 @@
 <meta charset="ISO-8859-1">
 <Title>Add Note</Title>
 <%@ include file="All_js_css.jsp"%>
-<header><%@ include file="navbar.jsp"%></header>
+<%@ include file="navbar.jsp"%>
 </head>
 <body>
 	<div class="container">
 		<br>
-		<h1>Add Your New Note</h1>
+		<h1 class="text-center">
+			<u>Add Your New Note</u>
+		</h1>
 		<br>
 
 		<form action="SaveNoteServlet" method="post">
 			<div class="form-group">
-				<label for="title"><b>Note Title</b></label> <input name="title"
-					required type="text" class="form-control" id="title"
-					placeholder="Enter Title">
+				<label for="title"><b
+					style="padding: 15px 0px 0px 10px; font-size: 25px;">Note Title</b></label>
+				<input name="title" required type="text" class="form-control"
+					id="title" placeholder="Enter Title" style="font-size: 20px;">
 			</div>
 			<div class="form-group">
-				<label for="content"><b>Note Content</b></label>
+				<label for="content"><b
+					style="padding: 15px 0px 0px 10px; font-size: 25px;">Note
+						Content</b></label>
 				<textarea id="content" placeholder="Enter your content here"
-					required name="content" class="form-control" style="height: 200px;"></textarea>
+					required name="content" class="form-control"
+					style="height: 200px; font-size: 20px;"></textarea>
 			</div>
 
 			<div class="container text-center">
-				<button type="submit" class="btn btn-primary">Add</button>
+				<button type="submit" class="btn btn-dark">Add</button>
 			</div>
 		</form>
 	</div>

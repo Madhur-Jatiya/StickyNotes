@@ -15,7 +15,9 @@
 <body>
 	<div class="container">
 		<br>
-		<h1>Edit Note</h1>
+		<h1 class="text-center">
+			<u>Edit Note</u>
+		</h1>
 
 		<%
 		int noteId = Integer.parseInt(request.getParameter("note_id").trim());
@@ -26,18 +28,21 @@
 		<form action="UpdateServlet" method="post">
 			<input value="<%=notes.getId()%>" name="noteId" type="hidden">
 			<div class="form-group">
-				<label for="title"><b>Note Title</b></label> <input name="title"
-					required type="text" class="form-control" id="title"
-					value="<%=notes.getTitle()%>" style="font-size: 20px;">
+				<label for="title"><b
+					style="padding: 15px 0px 0px 10px; font-size: 25px;">Note Title</b></label>
+				<input name="title" required type="text" class="form-control px-3"
+					id="title" value="<%=notes.getTitle()%>" style="font-size: 20px;">
 			</div>
 			<div class="form-group">
-				<label for="content"><b>Note Content</b></label>
+				<label for="content"><b
+					style="padding: 15px 0px 0px 10px; font-size: 25px;">Note
+						Content</b></label>
 				<textarea id="content" required name="content" class="form-control"
-					style="height: 300px; font-size: 16px;"><%=notes.getContent()%></textarea>
+					style="height: 300px; font-size: 20px;"><%=notes.getContent()%></textarea>
 			</div>
 
 			<div class="container text-center">
-				<button type="submit" class="btn btn-success">Save</button>
+				<button type="submit" class="btn btn-dark">Save</button>
 			</div>
 		</form>
 
