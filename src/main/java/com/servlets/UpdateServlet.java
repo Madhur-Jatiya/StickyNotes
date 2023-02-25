@@ -2,7 +2,6 @@ package com.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -10,16 +9,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 import com.entity.Sticky_Notes;
 import com.helper.FactoryProvider;
 
-public class SaveNoteServlet extends HttpServlet {
+public class UpdateServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	public SaveNoteServlet() {
+	public UpdateServlet() {
 		super();
 	}
 
@@ -28,18 +26,19 @@ public class SaveNoteServlet extends HttpServlet {
 		try {
 			String title = request.getParameter("title");
 			String content = request.getParameter("content");
-
-			Sticky_Notes notes = new Sticky_Notes(title, content, new Date());
-
+			int noteId = Integer.parseInt(request.getParameter("noteId").trim());
 			Session s = FactoryProvider.getSessionFactory().openSession();
+			Sticky_Notes notes = (Sticky_Notes) s.get(Sticky_Notes.class, noteId);
 			Transaction transaction = s.beginTransaction();
-			s.save(notes);
+			notes.setTitle(title);
+			notes.setContent(content);
+			s.update(notes);
 			transaction.commit();
 			s.close();
-			PrintWriter out = response.getWriter();
 			response.sendRedirect("All_Notes.jsp");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
+
 }

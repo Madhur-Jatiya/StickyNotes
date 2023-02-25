@@ -16,6 +16,12 @@
 		<description></description>
 		<servlet-class>com.servlets.DeleteServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>UpdateServlet</servlet-name>
+		<display-name>UpdateServlet</display-name>
+		<description></description>
+		<servlet-class>com.servlets.UpdateServlet</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>SaveNoteServlet</servlet-name>
 		<url-pattern>/SaveNoteServlet</url-pattern>
@@ -23,5 +29,9 @@
 	<servlet-mapping>
 		<servlet-name>DeleteServlet</servlet-name>
 		<url-pattern>/DeleteServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateServlet</servlet-name>
+		<url-pattern>/UpdateServlet</url-pattern>
 	</servlet-mapping>
 </web-app>

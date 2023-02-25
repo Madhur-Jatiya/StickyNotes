@@ -30,10 +30,6 @@
 				<button type="submit" class="btn btn-primary">Add</button>
 			</div>
 		</form>
-
-		<form action="Sticky_Notes" method="get">
-			<button type="submit" class="btn btn-primary">Add 2</button>
-		</form>
 	</div>
 
 </body>

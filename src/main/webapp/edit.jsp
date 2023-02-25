@@ -23,7 +23,8 @@
 		Sticky_Notes notes = (Sticky_Notes) s.get(Sticky_Notes.class, noteId);
 		%>
 
-		<form>
+		<form action="UpdateServlet" method="post">
+		<input value="<%=notes.getId()%>" name="noteId" type="hidden">
 			<div class="form-group">
 				<label for="title"><b>Note Title</b></label> <input name="title"
 					required type="text" class="form-control" id="title"
@@ -36,7 +37,7 @@
 			</div>
 
 			<div class="container text-center">
-				<button type="submit" class="btn btn-primary">Add</button>
+				<button type="submit" class="btn btn-success">Save</button>
 			</div>
 		</form>
 
