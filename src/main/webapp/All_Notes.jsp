@@ -29,16 +29,18 @@
 				%>
 
 				<div class="card mt-3">
-					<img class="card-img-top m-4" style="max-width: 100px;"
-						src="image/notes.png" alt="Card image cap">
 					<div class="card-body">
-						<h3 class="card-title text-center"><%=i+1 + ". "%><%=list.get(i).getTitle()%>
-						</h3>
-						<p class="card-text"><%=list.get(i).getContent()%>
+						<p style="font-weight: bold; color:red; text-align:right;"><%=list.get(i).getAddedDate()%></p>
+						<p class="card-title text-left tx" style="font-size: 80px;"><%=list.get(i).getTitle()%>
+						</p>
+
+						<p class="card-text" style="font-size: 20px;"><%=list.get(i).getContent()%>
 						</p>
 						<div class="container text-center mt-4">
-							<a href="edit.jsp?note_id=<%= list.get(i).getId() %>" class="btn btn-info mr-3">Update</a> 
-							<a href="DeleteServlet?note_id=<%= list.get(i).getId() %>"	class="btn btn-danger">Delete</a>
+							<a href="edit.jsp?note_id=<%=list.get(i).getId()%>"
+								class="btn btn-info mr-3">Update</a> <a
+								href="DeleteServlet?note_id=<%=list.get(i).getId()%>"
+								class="btn btn-danger">Delete</a>
 						</div>
 					</div>
 				</div>
