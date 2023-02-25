@@ -6,10 +6,10 @@
 <meta charset="ISO-8859-1">
 <Title>Add Note</Title>
 <%@ include file="All_js_css.jsp"%>
+<header><%@ include file="navbar.jsp"%></header>
 </head>
 <body>
 	<div class="container">
-		<%@ include file="navbar.jsp"%>
 		<br>
 		<h1>Add Your New Note</h1>
 		<br>

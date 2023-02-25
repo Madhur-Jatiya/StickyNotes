@@ -13,10 +13,10 @@
 <meta charset="ISO-8859-1">
 <title>All Notes</title>
 <%@ include file="All_js_css.jsp"%>
+<header><%@ include file="navbar.jsp"%></header>
 </head>
 <body>
 	<div class="container">
-		<%@ include file="navbar.jsp"%>
 		<br>
 		<h1>All Notes</h1>
 
@@ -30,18 +30,22 @@
 
 				<div class="card mt-3">
 					<div class="card-body">
-						<p class="card-title" style="font-size: 80px;"><%=list.get(i).getTitle()%>
-							<span
-								style="font-weight: bold; color: #718093; text-align: right; font-size: 20px;"><%=list.get(i).getAddedDate()%></span>
-						</p>
-
+						<div
+							style="display: flex; justify-content: space-between; align-items: end;">
+							<h4 class="card-title"
+								style="font-size: 36px; text-transform: capitalize;"><%=list.get(i).getTitle()%>
+							</h4>
+							<p
+								style="font-weight: bold; color: #484848; text-align: right; font-size: 16px;"><%=list.get(i).getAddedDate()%>
+							</p>
+						</div>
 						<p class="card-text" style="font-size: 20px;"><%=list.get(i).getContent()%>
 						</p>
 						<div class="container text-center mt-4">
 							<a href="edit.jsp?note_id=<%=list.get(i).getId()%>"
-								class="btn btn-info mr-3">Update</a> <a
+								class="btn btn-secondary mr-3">Update</a> <a
 								href="DeleteServlet?note_id=<%=list.get(i).getId()%>"
-								class="btn btn-danger">Delete</a>
+								class="btn btn-dark">Delete</a>
 						</div>
 					</div>
 				</div>
@@ -52,8 +56,7 @@
 				%>
 			</div>
 		</div>
-
-
 	</div>
+
 </body>
 </html>

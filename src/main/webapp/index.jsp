@@ -7,14 +7,11 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <%@ include file="All_js_css.jsp"%>
-
+<header><%@ include file="navbar.jsp"%></header>
 <title>Sticky Notes | Home</title>
 
 </head>
 <body>
-	<div class="container">
-		<%@ include file="navbar.jsp"%>
-	</div>
 
 </body>
 </html>

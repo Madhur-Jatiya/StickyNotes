@@ -10,10 +10,10 @@
 <meta charset="ISO-8859-1">
 <title>Edit</title>
 <%@ include file="All_js_css.jsp"%>
+<%@ include file="navbar.jsp"%>
 </head>
 <body>
 	<div class="container">
-		<%@ include file="navbar.jsp"%>
 		<br>
 		<h1>Edit Note</h1>
 
@@ -24,16 +24,16 @@
 		%>
 
 		<form action="UpdateServlet" method="post">
-		<input value="<%=notes.getId()%>" name="noteId" type="hidden">
+			<input value="<%=notes.getId()%>" name="noteId" type="hidden">
 			<div class="form-group">
 				<label for="title"><b>Note Title</b></label> <input name="title"
 					required type="text" class="form-control" id="title"
-					value="<%=notes.getTitle()%>">
+					value="<%=notes.getTitle()%>" style="font-size: 20px;">
 			</div>
 			<div class="form-group">
 				<label for="content"><b>Note Content</b></label>
 				<textarea id="content" required name="content" class="form-control"
-					style="height: 200px;"><%=notes.getContent()%></textarea>
+					style="height: 300px; font-size: 16px;"><%=notes.getContent()%></textarea>
 			</div>
 
 			<div class="container text-center">
