@@ -30,8 +30,9 @@
 
 				<div class="card mt-3">
 					<div class="card-body">
-						<p style="font-weight: bold; color:red; text-align:right;"><%=list.get(i).getAddedDate()%></p>
-						<p class="card-title text-left tx" style="font-size: 80px;"><%=list.get(i).getTitle()%>
+						<p class="card-title" style="font-size: 80px;"><%=list.get(i).getTitle()%>
+							<span
+								style="font-weight: bold; color: #718093; text-align: right; font-size: 20px;"><%=list.get(i).getAddedDate()%></span>
 						</p>
 
 						<p class="card-text" style="font-size: 20px;"><%=list.get(i).getContent()%>
