@@ -32,7 +32,7 @@
 					<img class="card-img-top m-4" style="max-width: 100px;"
 						src="image/notes.png" alt="Card image cap">
 					<div class="card-body">
-						<h3 class="card-title text-center"><%=list.get(i).getId() + "."%><%=list.get(i).getTitle()%>
+						<h3 class="card-title text-center"><%=i+1 + ". "%><%=list.get(i).getTitle()%>
 						</h3>
 						<p class="card-text"><%=list.get(i).getContent()%>
 						</p>
