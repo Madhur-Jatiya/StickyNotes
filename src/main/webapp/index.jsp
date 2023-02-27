@@ -8,7 +8,7 @@
 
 <%@ include file="All_js_css.jsp"%>
 <%@ include file="navbar.jsp"%>
-<title>Sticky Notes | Home</title>
+<title>Home</title>
 </head>
 <body>
 
