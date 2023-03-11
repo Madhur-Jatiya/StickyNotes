@@ -7,3 +7,6 @@ The website's design is created using CSS and Bootstrap, which provides a modern
 The website's data is stored in a MySQL database, which is managed by Hibernate, a powerful and flexible Object-Relational Mapping (ORM) framework. Hibernate allows you to map the database tables to Java objects, making it easy to manage and manipulate data in your application.
 
 With StickyNotes, users can add, view, edit, and delete notes as they please, making it easy to manage their daily tasks and keep track of important information. The website's features provide an efficient and organized way for users to manage their notes and tasks, making it a valuable tool for anyone who needs to stay organized and productive.
+
+![out](https://user-images.githubusercontent.com/70679523/224508992-b1c95a8c-836e-4749-baf5-50f0fd9d6995.png)
+![image](https://user-images.githubusercontent.com/70679523/224509015-966ca388-7a08-471d-8726-220d24ac68a3.png)
